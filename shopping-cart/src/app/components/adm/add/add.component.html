@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+<div class="container">
+ 
+      <div class="row">
+        <div class="col">
+<div class="container-fluid mb-5 col-xs-2 ">
+    <h1>Add a Product</h1>
+    <form #userForm="ngForm"  (ngSubmit)="onClick(userForm.value)">
+    
+    
+    <div class="form-group w-25">
+    
+    <input type="text" class="form-control input-sm" name="id" placeholder="Product Id" ngModel> 
+    </div>
+    
+    <div class="form-group w-25">
+    
+    
+      <input type="text" name="name" class="form-control input-sm" placeholder="Product Name" ngModel>
+      </div>
+    
+    
+    
+    <div class="form-group  w-25">
+      
+      
+      <input type="number" name="price" class="form-control input-sm"  placeholder="Price" ngModel> 
+      </div>
+    
+    
+    <div class="form-group w-25">
+    
+      
+      <input type="text" name="description" class="form-control input-sm" placeholder="Description" ngModel>
+      </div>
+    
+    
+    <button type="submit" class="btn btn-primary"> submit</button>
+    
+    </form>
+</div>
+
+
+</div>
+</div>
+    
+
+
+    </div>
