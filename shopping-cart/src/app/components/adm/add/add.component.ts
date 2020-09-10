@@ -1,3 +1,4 @@
+import { MessageService } from './../../../services/message.service';
 import { Product2 } from './../../../models/product';
 import { ProductService } from './../../../services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +16,7 @@ export class AddComponent implements OnInit {
 
    
 
-  constructor(private productservice:ProductService) { }
+  constructor(private productservice:ProductService,private messageService:MessageService) { }
 
   ngOnInit(): void {
   }
@@ -23,14 +24,13 @@ export class AddComponent implements OnInit {
 
    this.p.name=data.name
    this.p.id=data.id
-   console.log(this.p.id)
-
+   
  this.p.description=data.description
  this.p.price=data.price
-    
+    console.log(data.description+"this is description")
   this.productservice.addProduct(this.p).subscribe((product)=>{
-    
-console.log(product);
+    this.messageService.sendMessage(product)
+
 
 
    })
