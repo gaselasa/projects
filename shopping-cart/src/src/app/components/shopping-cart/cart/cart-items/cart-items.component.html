@@ -1,0 +1,10 @@
+
+
+<div class="cart-item">
+    <span>{{cartItemArray.productName}}</span>==<strong>{{cartItemArray.qty}}</strong> <br>
+
+    <strong>{{(cartItemArray.qty*cartItemArray.price)|currency:'ZAR'}}</strong> 
+        <button type="button" class="btn btn-sm btn-primary product-btn" (click)="deleteProduct()">delete</button>
+
+
+</div>

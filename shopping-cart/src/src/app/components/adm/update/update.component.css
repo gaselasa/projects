@@ -1,0 +1,12 @@
+
+.ng-valid.required{
+
+    background-color: rgb(145, 160, 145);
+
+}
+
+.ng-invalid:not(form){
+
+    background-color: lightcoral;
+}
+
